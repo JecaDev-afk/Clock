@@ -1,0 +1,75 @@
+/* :root{
+    --bg-color: #2f2d2d;
+    --bodyTextColor: white;
+} */
+.darkTheme{
+    --bg-color: #2f2d2d;
+    --body-text-color: white;
+    /* clock */
+    --clock-bg-color: #121111;
+    --clock-box-shadow-color: #202123;
+    
+    --time-color: aqua;
+    --time-shadow-color: #0836df;
+    --date-color: rgb(55, 173, 108);
+    --date-text-shadow-color: #2ea059;
+    /* clock */
+}
+
+.lightTheme{
+    --bg-color: white;
+    --body-text-color: black;
+    /* clock */
+    --clock-bg-color: #c2c6b4;
+    --clock-box-shadow-color: #202123;
+    
+    --time-color: aqua;
+    --time-shadow-color: black;
+
+    --date-color: rgb(55, 173, 108);
+    --date-text-shadow-color:  #2ea059;
+    /* clock */
+    
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    font-family: 'Consolas', 'Courier New', monospace;
+    color: var(--body-text-color);
+}
+.Clock{
+    background: var(--clock-bg-color);
+    padding: 3.5%;
+    border-radius: 15px;
+    box-shadow: 10px 10px 15px var(--clock-box-shadow-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-content: center;
+}
+.time{
+    font-size: 5rem;
+    color: var(--time-color);
+   text-shadow: 5px 5px 10px var(--time-shadow-color);
+}
+.date{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--date-color);
+    text-shadow: 2px 2px 15px var(--date-text-shadow-color);
+
+}
+
+
+/* MEDIA */
+@media screen and (max-width: 600px) {
+    .time{
+        font-size: 3rem;
+    }
+    .date{
+        font-size: 1rem ;
+    }
+}
