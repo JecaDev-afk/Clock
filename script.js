@@ -46,4 +46,15 @@ const body = document.body
     themeSwitcher.addEventListener('click', function() {
         // Code to be executed when the button is clicked
        body.classList.toggle('lightTheme')
+    //    themeSwitcher.textContent = ();
+
+    if(body.classList.contains('lightTheme')){
+        localStorage.setItem("theme","light")
+    }else{
+        localStorage.setItem("theme","dark")
+    }
     });
+const savedTheme = localStorage.getItem('theme');
+if(savedTheme == "light"){
+    body.classList.add('lightTheme');
+}
