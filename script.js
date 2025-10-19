@@ -50,8 +50,10 @@ const body = document.body
 
     if(body.classList.contains('lightTheme')){
         localStorage.setItem("theme","light")
+        themeSwitcher.textContent = '🌙';
     }else{
         localStorage.setItem("theme","dark")
+        themeSwitcher.textContent = '☀️';
     }
     });
 const savedTheme = localStorage.getItem('theme');
