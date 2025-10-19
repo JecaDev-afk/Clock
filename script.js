@@ -8,7 +8,7 @@ function UpdateClock(){
         minutes: now.getMinutes(),
         seconds: now.getSeconds(),
         
-        // month name
+        
         month: now.toLocaleString('en-US', {month: 'long'}),
         weekDay: now.toLocaleDateString('en-US', {weekday: 'long'}),
 

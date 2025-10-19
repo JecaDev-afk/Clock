@@ -3,10 +3,11 @@
     --bodyTextColor: white;
 } */
 .darkTheme{
-    --bg-color: #2f2d2d;
+    --bg-color: #1e1c1c;
+    --main-gradient: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(61, 61, 61, 1) 50%, rgba(102, 102, 102, 1) 100%);
     --body-text-color: white;
     /* clock */
-    --clock-bg-color: #121111;
+    --clock-bg-color:  #121111;
     --clock-box-shadow-color: #202123;
     
     --time-color: aqua;
@@ -15,17 +16,21 @@
     --date-text-shadow-color: #2ea059;
     /* clock */
     /* themeSwitcher */
-    --button-color: #121111;
+    --button-color: #1a1818;
     --button-text-color: white;
     --button-shadow-color: #1c1b1b;
+    --button-hower-color: rgb(13, 13, 13);
     /* themeSwitcher */
 }
 
 .lightTheme{
+    /* --main-gradient: linear-gradient(358deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
     --bg-color: white;
     --body-text-color: black;
     /* clock */
-    --clock-bg-color: #c2c6b4;
+    /* --clock-gradient: */
+    /* --clock-gradient: linear-gradient(177deg, rgba(63, 94, 251, 1) 0%, rgba(252, 70, 107, 1) 100%); */
+    --clock-bg-color:  #c2c6b4;
     --clock-box-shadow-color: #5c5e62;
     
     --time-color: aqua;
@@ -38,6 +43,7 @@
     --button-color: #c2c6b4;
     --button-text-color: white;
     --button-shadow-color: #5c5e62;
+        --button-hower-color: rgb(88, 88, 88);
     /* themeSwitcher */
 }
 body{
@@ -47,6 +53,7 @@ body{
     align-items: center;
     min-height: 100vh;
     background-color: var(--bg-color);
+    /* background: var(--main-gradient); */
     font-family: 'Consolas', 'Courier New', monospace;
     color: var(--body-text-color);
 }
@@ -59,8 +66,12 @@ body{
     height: 40px;
     border-radius: 15px;
 
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+      
+
 }
 .Clock{
+
     background: var(--clock-bg-color);
     padding: 3.5%;
     border-radius: 15px;
@@ -83,6 +94,12 @@ body{
 
 }
 
+/* animations */
+.themeSwitcher:hover{
+    background-color: var(--button-hower-color);
+    transform: scale(1.1);
+}
+/* animations */
 
 /* MEDIA */
     @media screen and (max-width: 600px) {
